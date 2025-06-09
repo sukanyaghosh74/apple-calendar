@@ -17,8 +17,9 @@
 ## 📸 Screenshots
 
 1. **Landing/Login Page:**  
-   ![Login Page 1](./screenshots/login_1)
-   ![Login Page 2](./screenshots/login_2)
+   ![Login Page 1](https://github.com/user-attachments/assets/50ac5b66-808d-457a-83a6-c26079b90b0d)
+   ![Login Page 2](https://github.com/user-attachments/assets/a1b220d6-1823-455e-a13c-2d5d75655002)
+
 3. **Successful Event Display:**  
    ![Events List](./screenshots/events.png)
    
