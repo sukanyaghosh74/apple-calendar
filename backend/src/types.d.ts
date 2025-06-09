@@ -1,0 +1,1 @@
+// Custom type definitions for CalDAV events and user sessions will go here. 
