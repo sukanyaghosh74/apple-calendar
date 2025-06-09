@@ -17,8 +17,9 @@
 ## 📸 Screenshots
 
 1. **Landing/Login Page:**  
-   ![Login Page](./screenshots/login.png)
-2. **Successful Event Display:**  
+   ![Login Page 1](./screenshots/login_1.png)
+   ![Login Page 2](./screenshots/login_2.png)
+3. **Successful Event Display:**  
    ![Events List](./screenshots/events.png)
    
 ---
