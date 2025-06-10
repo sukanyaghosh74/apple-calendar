@@ -7,6 +7,7 @@ export default function Home() {
   const [events, setEvents] = useState<any[] | null>(null);
 
   const handleLoginSuccess = (events: any[]) => {
+    console.log('Login successful, received events:', events);
     setEvents(events);
   };
 
