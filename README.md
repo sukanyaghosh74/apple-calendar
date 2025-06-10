@@ -17,8 +17,9 @@
 ## 📸 Screenshots
 
 1. **Landing/Login Page:**  
-   ![Login Page 1](./screenshots/login_1)
-   ![Login Page 2](./screenshots/login_2)
+   ![Login Page 1](https://github.com/user-attachments/assets/50ac5b66-808d-457a-83a6-c26079b90b0d)
+   ![Login Page 2](https://github.com/user-attachments/assets/a1b220d6-1823-455e-a13c-2d5d75655002)
+
 3. **Successful Event Display:**  
    ![Events List](./screenshots/events.png)
    
@@ -101,3 +102,24 @@ npm run dev
 ## 📄 License
 
 This project is for the Dayli technical assignment and is not intended for production use.
+
+---
+
+## ⚠️ Caveats & Troubleshooting
+
+While the event fetching system is fully implemented using Apple's official CalDAV protocol and the tsdav library, there are a few things to be aware of:
+
+- **App-Specific Passwords:** Always use a fresh app-specific password generated from [appleid.apple.com](https://appleid.apple.com/account/manage). Expired or previously used passwords may not work.
+- **iCloud Account Requirements:** Your iCloud account must have at least one calendar and some events in the next 7 days for results to appear.
+- **2FA Required:** Two-factor authentication must be enabled on your Apple ID to generate app-specific passwords.
+- **Network/Firewall Issues:** Some networks or firewalls may block CalDAV requests. If you encounter connection errors, try a different network.
+- **Apple CalDAV Quirks:** Apple's CalDAV server can sometimes rate-limit or temporarily block requests, especially after multiple failed logins.
+- **Event Parsing:** Rare or complex event formats (e.g., certain recurring events) may not display perfectly.
+- **Region/Account Variations:** Some iCloud accounts (especially with non-standard regions or settings) may behave differently.
+
+**If you encounter any issues:**
+- Double-check your credentials and password freshness.
+- Make sure you have events in your iCloud calendar for the next 7 days.
+- Check backend logs for error messages.
+- Feel free to contact me for troubleshooting or support!
+
