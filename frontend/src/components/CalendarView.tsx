@@ -3,8 +3,23 @@
 import React from 'react';
 // import { CalendarDays } from 'lucide-react'; // Uncomment if Lucide is installed
 
+interface CalendarEvent {
+  summary?: string;
+  dtstart?: string;
+  dtend?: string;
+  calendar?: string;
+  uid?: string;
+  data?: {
+    summary?: string;
+    dtstart?: string;
+    dtend?: string;
+    calendar?: string;
+    uid?: string;
+  };
+}
+
 interface CalendarViewProps {
-  events: any[];
+  events: CalendarEvent[];
 }
 
 // Helper function to format dates consistently

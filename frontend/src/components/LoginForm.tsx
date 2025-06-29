@@ -2,8 +2,23 @@
 
 import React, { useState } from 'react';
 
+interface CalendarEvent {
+  summary?: string;
+  dtstart?: string;
+  dtend?: string;
+  calendar?: string;
+  uid?: string;
+  data?: {
+    summary?: string;
+    dtstart?: string;
+    dtend?: string;
+    calendar?: string;
+    uid?: string;
+  };
+}
+
 interface LoginFormProps {
-  onSuccess: (events: any[]) => void;
+  onSuccess: (events: CalendarEvent[]) => void;
 }
 
 export default function LoginForm({ onSuccess }: LoginFormProps) {
@@ -12,7 +27,7 @@ export default function LoginForm({ onSuccess }: LoginFormProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
     setLoading(true);
@@ -24,9 +39,13 @@ export default function LoginForm({ onSuccess }: LoginFormProps) {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Login failed');
-      onSuccess(data.events);
-    } catch (err: any) {
-      setError(err.message);
+      onSuccess(data.events as CalendarEvent[]);
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError('An unknown error occurred');
+      }
     } finally {
       setLoading(false);
     }

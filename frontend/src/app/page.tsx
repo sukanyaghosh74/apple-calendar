@@ -3,10 +3,25 @@ import LoginForm from '../components/LoginForm';
 import CalendarView from '../components/CalendarView';
 import React, { useState } from 'react';
 
-export default function Home() {
-  const [events, setEvents] = useState<any[] | null>(null);
+interface CalendarEvent {
+  summary?: string;
+  dtstart?: string;
+  dtend?: string;
+  calendar?: string;
+  uid?: string;
+  data?: {
+    summary?: string;
+    dtstart?: string;
+    dtend?: string;
+    calendar?: string;
+    uid?: string;
+  };
+}
 
-  const handleLoginSuccess = (events: any[]) => {
+export default function Home() {
+  const [events, setEvents] = useState<CalendarEvent[] | null>(null);
+
+  const handleLoginSuccess = (events: CalendarEvent[]) => {
     console.log('Login successful, received events:', events);
     setEvents(events);
   };
