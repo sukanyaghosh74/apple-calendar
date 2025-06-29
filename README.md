@@ -1,6 +1,6 @@
 # Apple Calendar Integration Web App
 
-> **A minimal, beautiful web app that connects to a user’s Apple Calendar (iCloud) via CalDAV, allowing iCloud login with an app-specific password and displaying the next 7 days of events.**
+> **A minimal, beautiful web app that connects to a user's Apple Calendar (iCloud) via CalDAV, allowing iCloud login with an app-specific password and displaying the next 7 days of events.**
 
 ---
 
@@ -17,9 +17,8 @@
 ## 📸 Screenshots
 
 1. **Landing/Login Page:**  
-   ![Login Page 1](https://github.com/user-attachments/assets/50ac5b66-808d-457a-83a6-c26079b90b0d)
-   ![Login Page 2](https://github.com/user-attachments/assets/a1b220d6-1823-455e-a13c-2d5d75655002)
-
+   ![Login Page 1](./screenshots/login_1)
+   ![Login Page 2](./screenshots/login_2)
 3. **Successful Event Display:**  
    ![Events List](./screenshots/events.png)
    
@@ -55,7 +54,7 @@ npm run dev
 
 1. **Generate an App-Specific Password:**
    - Go to [appleid.apple.com](https://appleid.apple.com/account/manage)
-   - Under “Sign-In and Security,” select “App-Specific Passwords” and generate a new one.
+   - Under "Sign-In and Security," select "App-Specific Passwords" and generate a new one.
 
 2. **Login:**
    - Enter your iCloud email and the app-specific password in the login form.
@@ -103,8 +102,6 @@ npm run dev
 
 This project is for the Dayli technical assignment and is not intended for production use.
 
----
-
 ## ⚠️ Caveats & Troubleshooting
 
 While the event fetching system is fully implemented using Apple's official CalDAV protocol and the tsdav library, there are a few things to be aware of:
@@ -122,4 +119,3 @@ While the event fetching system is fully implemented using Apple's official CalD
 - Make sure you have events in your iCloud calendar for the next 7 days.
 - Check backend logs for error messages.
 - Feel free to contact me for troubleshooting or support!
-
